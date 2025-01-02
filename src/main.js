@@ -7,12 +7,16 @@ import './style.css';
 import Home from './views/Home.vue';
 import Projects from './views/Projects.vue';
 import Contact from './views/Contact.vue';
+import AboutUs from './views/AboutUs.vue';
+import ProjectDetail from './components/ProjectDetail.vue';
 
 // Rutas
 const routes = [
   { path: '/', component: Home },
   { path: '/projects', component: Projects },
   { path: '/contact', component: Contact },
+  { path: '/about', component: AboutUs },
+  { path: '/project:id', component: ProjectDetail}
 ];
 
 // Crear el router
