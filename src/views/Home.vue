@@ -1,11 +1,16 @@
 <template>
     <div class="container mx-auto px-4">
+      
+      <div class="my-6 mb-8">
+        <h2 class="text-xl font-light tracking-wide mb-2">PROYECTOS DESTACADOS</h2>
+      </div>
+
       <div class="space-y-32">
         <article v-for="project in projects" :key="project.id" class="grid grid-cols-12 gap-8">
           <div class="col-span-3">
             <img :src="project.logo" alt="" class="w-12 h-12 mb-6">
-            <h2 class="text-xl font-light mb-2">{{ project.title }}</h2>
-            <p class="text-sm text-gray-500">{{ project.location }}</p>
+            <h2 class="text-xl font-light tracking-wide mb-2">{{ project.title }}</h2>
+            <p class="text-sm tracking-wide text-gray-500">{{ project.location }}</p>
           </div>
           <div class="col-span-9">
             <img 
