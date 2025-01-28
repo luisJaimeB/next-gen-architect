@@ -127,9 +127,11 @@
   import { ref } from 'vue'
   import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
   import { useRoute } from 'vue-router';
+  import { useProjectsStore } from '../store/projects';
 
   const route = useRoute();
-  const projectId = route.params.id;
+  const store = useProjectsStore();
+  const project = store.getProjectById(route.params.id);
   
   // Sample images array - replace with your actual project images
   const images = [

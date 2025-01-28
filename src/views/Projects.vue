@@ -16,22 +16,23 @@
         </div>
       </div>
     </div>
-  </template>
+</template>
   
-  <script setup>
-  import { ref } from 'vue';
-  import { useRouter } from 'vue-router';
-  
-  const projects = ref([
-    { id: 1, name: 'Modern Residence', description: 'A sleek, eco-friendly home design', image: '/src/assets/buildings1.jpg?height=300&width=400' },
-    { id: 2, name: 'Urban Office Complex', description: 'Innovative workspace solution for a tech company', image: '/src/assets/city-1.jpg?height=300&width=400' },
-    { id: 3, name: 'Sustainable Community Center', description: 'Multi-purpose facility with green technologies', image: '/src/assets/library-1.jpg?height=300&width=400' },
-  ]);
-  
-  const router = useRouter();
-  
-  const goToProject = (id) => {
-    router.push(`/projects/${id}`); // Redirige a la ruta específica del proyecto
-  };
-  </script>
+<script setup>
+    import { ref } from 'vue';
+    import { useRouter } from 'vue-router';
+    
+    const projects = ref([
+        { id: 1, name: 'Modern Residence', description: 'A sleek, eco-friendly home design', image: '/src/assets/buildings1.jpg?height=300&width=400' },
+        { id: 2, name: 'Urban Office Complex', description: 'Innovative workspace solution for a tech company', image: '/src/assets/city-1.jpg?height=300&width=400' },
+        { id: 3, name: 'Sustainable Community Center', description: 'Multi-purpose facility with green technologies', image: '/src/assets/library-1.jpg?height=300&width=400' },
+    ]);
+    
+    const router = useRouter();
+    
+    const goToProject = (id) => {
+        router.push(`/projects/${id}`);
+    };
+
+</script>
   
