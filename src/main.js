@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import App from './App.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import './style.css';
@@ -16,7 +17,7 @@ const routes = [
   { path: '/projects', component: Projects },
   { path: '/contact', component: Contact },
   { path: '/about', component: AboutUs },
-  { path: '/project:id', component: ProjectDetail}
+  { path: '/projectsDetail', component: ProjectDetail}
 ];
 
 // Crear el router
@@ -25,5 +26,7 @@ const router = createRouter({
   routes,
 });
 
+const pinia = createPinia()
+
 // Crear y montar la aplicación
-createApp(App).use(router).mount('#app');
+createApp(App).use(pinia).use(router).mount('#app');
