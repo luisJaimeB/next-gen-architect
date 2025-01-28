@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-black text-white py-8 px-4 mt-4">
+  <footer class="bg-black text-white py-12 px-4 mt-4">
     <div class="container mx-auto max-w-6xl relative">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center relative">
         <!-- Social Media Icons -->
@@ -26,22 +26,24 @@
         <!-- Vertical Divider Left -->
         <div class="hidden md:block h-full border-l border-white absolute left-1/3 top-0"></div>
 
-        <!-- Email Form -->
-        <div class="text-center">
-          <h2 class="text-xl mb-4 tracking-wider">SOMOS LA NUEVA GENERACIÓN</h2>
-          <form @submit.prevent="handleSubmit" class="space-y-3">
+        <!-- Logo and Email Form -->
+        <div class="text-center flex flex-col items-center">
+          <router-link to="/" class="mb-6">
+            <img src="/src/assets/logo-foot-naranja01.png" alt="Company Logo" class="h-16 w-auto filter transition-all duration-300" />
+          </router-link>
+          <form @submit.prevent="handleSubmit" class="space-y-3 w-full max-w-xs">
             <div class="relative">
               <input
                 type="email"
                 v-model="email"
                 placeholder="Ingresa tu email aquí"
                 required
-                class="w-full px-4 py-2 bg-transparent border border-white focus:outline-none"
+                class="w-full px-4 py-2 bg-transparent border border-white focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md"
               />
             </div>
             <button
               type="submit"
-              class="w-full px-4 py-2 border border-white hover:bg-white hover:text-black transition-colors"
+              class="w-full px-4 py-2 border border-white hover:bg-white hover:text-black transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               Enviar
             </button>
@@ -55,7 +57,7 @@
         <div class="text-center md:text-right text-sm">
           © 2025 Creado por Delectus labs
           <br />
-          con <a href="#" class="underline hover:opacity-75">Delectuslabs.com</a>
+          con <a href="#" class="underline hover:opacity-75 hover:text-blue-400 transition-colors">Delectuslabs.com</a>
         </div>
       </div>
     </div>
